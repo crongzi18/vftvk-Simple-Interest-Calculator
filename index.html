@@ -1,16 +1,48 @@
+<!DOCTYPE html>
 <html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+<head>
+  <title>Any relevant title you want to give</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+<body>
+  <div class="maindiv">
+    <h1>Simple Interest Calculator</h1>
+    <div class="subdiv">
+      Amount <input type="number" id="principal"> <br><br>
+      Interest Rate <input type="range" id="rate" name="rate" min="1" max="20" step="0.25" onchange="updateRate()">
+      <span id="rate_val">10.25%</span>
+    <br><br>
+      No. of Years <select name="years" id="years">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select> <br><br>
+
+
+      <button id="compute" onclick="compute()"> Interest Compute</button><br>
+      <span id="text1"></span>
+      <span id = "principal_res"></span><br>
+      <span id="text2"></span>
+      <span id = "rate_res"></span><br>
+      <span id="text3"></span>
+      <span id = "interest_res"></span><br>
+      <span id="text4"></span>
+      <span id = "years_res"></span><br>
+    </div>
+
+    <footer>&#169; This Calculator belongs to Rong</footer>
+  </div>
+
+</body>
+
 </html>
